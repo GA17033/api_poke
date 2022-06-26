@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0 px;
+    padding: 0 px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-image: url('./anniversaryposter2019.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+#pokemon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-body{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+.btn-dark{
+    display: block;
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    border-style: black solid 1px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.card{
+    width: 15%;
+    height: 250px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+#search-poken{
+    display: block;
+    width: 40%;
+    height: 80%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+}
+.search_btn{
+    display: block;
+    width: 20%;
+    height: 40px;
+    margin-left: 15px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color:brown;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.search_all{
+    display: block;
+    width: 20%;
+    height: 40px;
+    margin-left: 15px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color:brown;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.search_btn:hover{
+    background-color:brown;
+    box-shadow: crimson 0px 0px 10px;
+    color:white;
+    cursor: pointer;
+}
+.search_all:hover{
+    background-color:brown;
+    box-shadow: crimson 0px 0px 10px;
+    color:white;
+    cursor: pointer;
+}
+
+.pag{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pag-items{
+    margin: 40px;
+    background-color: brown;
+    text-align: center;
+    line-height: 50px;
+    width: 10%;
+    height: 50px;
+    border-radius: 10px;
+    
+    
+}
+.pag-items:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.pag-link{
+    display: block;
+    text-decoration: none;
+    color: white;
+    
+}  
+@media screen and (max-width: 1000px){
+    .card{
+        width: 25%;
+        height: 100%;
+        margin: 15px;
+    }
+}
+@media screen and (max-width: 600px){
+    .card{
+        width: 50%;
+        height: 100%;
+        margin: 15px;
+    }
+   
+}
