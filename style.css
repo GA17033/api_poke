@@ -65,6 +65,10 @@ h5, p{
     
     
 }
+.card:hover{
+    box-shadow: black;
+    transform: scale(1.1);
+}
 h2{
     font-size: 19px;
     text-align: center;
