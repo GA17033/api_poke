@@ -39,6 +39,7 @@ const traer = async (url) => {
   btn_prev.dataset.url = btnprev ;
   //console.log(btnnext);
   recorrer(data.results);
+  console.log(data.results);
   }
 const recorrer = async(data) => {
   for(let index of data){
@@ -50,7 +51,8 @@ const recorrer = async(data) => {
 }
 const mostrar = data=>{
   template.querySelector('img').src = data.sprites.front_default;
-  template.querySelector('h5').textContent = data.name;
+  template.querySelector('h5').textContent ="Name: " + data.name;
+  template.querySelector('p').textContent = "Type: " + data.types[0].type.name;
   template.querySelector('.btn-dark').dataset.id=data.id;
   const clone = template.cloneNode(true);
   fragment.appendChild(clone);
@@ -61,6 +63,7 @@ const buscar = async() => {
   const response = await fetch(url + busqueda);
   const data = await response.json();
   card.innerHTML = '';
+ 
   mostrar(data);
 }
 search_btn.addEventListener('click', buscar);
