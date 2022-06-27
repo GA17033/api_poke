@@ -1,3 +1,4 @@
+//variables
 const card = document.querySelector('#pokemon');
 const template = document.querySelector('#template').content;
 const fragment = document.createDocumentFragment();
@@ -17,19 +18,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
   traer(url);
   
 });
+//evento del boton para ir hacia adelante
 btn_next.addEventListener('click', async(event) => {
   event.preventDefault();
   const url = event.target.dataset.url;
   card.innerHTML = '';
   traer(url);
 })
-
+//evento del boton para regresar hacia atras
 btn_prev.addEventListener('click', async(event) => {
   event.preventDefault();
   const url = event.target.dataset.url;
   card.innerHTML = '';
   traer(url);
 })
+//conexion hacia pokeapi
 const traer = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
@@ -41,6 +44,7 @@ const traer = async (url) => {
   recorrer(data.results);
   console.log(data.results);
   }
+  //recorer todos los pokemones
 const recorrer = async(data) => {
   for(let index of data){
     const data = await fetch(index.url);
@@ -49,25 +53,28 @@ const recorrer = async(data) => {
     mostrar(pokemon);
   }
 }
+//pintamos los pokemones
 const mostrar = data=>{
   template.querySelector('img').src = data.sprites.front_default;
   template.querySelector('h5').textContent ="Name: " + data.name;
+  template.querySelector('h2').textContent ="# " + data.id;
   template.querySelector('p').textContent = "Type: " + data.types[0].type.name;
   template.querySelector('.btn-dark').dataset.id=data.id;
   const clone = template.cloneNode(true);
   fragment.appendChild(clone);
   card.appendChild(fragment);
 }
+//buscamos por id
 const buscar = async() => {
   const busqueda = search_poke.value;
   const response = await fetch(url + busqueda);
   const data = await response.json();
-  
   card.innerHTML = '';
   
  
   mostrar(data);
 }
+//evento del boton buscar
 search_btn.addEventListener('click', buscar);
 
 
