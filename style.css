@@ -9,6 +9,7 @@ body{
     font-size: 18px;
     background-image: url('./anniversaryposter2019.jpg');
     background-size: cover;
+    background-attachment: fixed;
     background-repeat:no-repeat;
 }
 

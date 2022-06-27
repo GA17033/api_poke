@@ -62,7 +62,9 @@ const buscar = async() => {
   const busqueda = search_poke.value;
   const response = await fetch(url + busqueda);
   const data = await response.json();
+  
   card.innerHTML = '';
+  
  
   mostrar(data);
 }
